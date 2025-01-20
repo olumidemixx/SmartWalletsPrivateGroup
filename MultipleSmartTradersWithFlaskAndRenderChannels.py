@@ -28,7 +28,7 @@ BOT_TOKEN = "7931001355:AAFtun7fy35zwg5z_1T_ugoln1f5zdM5Sa0"#"7327291802:AAFPM91
 API_ID = 21202746#int(os.getenv("API_ID"))
 API_HASH = "e700432294937e6925a83149ee7165a0"#os.getenv("API_HASH")
 # Create Telethon client
-telethon_client = TelegramClient('test', API_ID, API_HASH)
+telethon_client = TelegramClient('testrunn', API_ID, API_HASH)
 
 # Excluded token address
 EXCLUDED_TOKEN = 'So11111111111111111111111111111112'
@@ -484,7 +484,7 @@ async def main():
     application.add_handler(CommandHandler("stop", stop))
 
     PORT = int(os.environ.get('PORT', '8080'))
-    WEBHOOK_URL = "https://multiplesmarttraders-xq0j.onrender.com/telegram"
+    WEBHOOK_URL = "https://smartwalletsprivategroup.onrender.com/telegram"
     await application.bot.set_webhook(url=WEBHOOK_URL)
 
     app = Flask(__name__)
