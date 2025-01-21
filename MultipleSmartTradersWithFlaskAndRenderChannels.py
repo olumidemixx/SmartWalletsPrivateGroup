@@ -58,7 +58,7 @@ class MonitoringSession:
 
 async def initialize_telethon():
     #global telethon_client
-    #telethon_client = TelegramClient('testkit', API_ID, API_HASH)
+    #telethon_client = TelegramClient('project', API_ID, API_HASH)
     await telethon_client.start()
     #logging.info("Telethon client initialized and started")
 
