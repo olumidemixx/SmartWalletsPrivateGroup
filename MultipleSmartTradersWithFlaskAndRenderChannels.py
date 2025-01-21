@@ -332,7 +332,7 @@ async def monitor_channels(context, session):
                             )
                         )
 
-                        message_parts = [f"{len(traders)} traders bought `{address}`: \n "]
+                        message_parts = [f"{len(traders)} traders bought `{address}`: \n"]
                         
                         for idx, trader in enumerate(sorted_traders, 1):
                             sol_amount = session.token_sol_amounts[address].get(trader)
@@ -342,8 +342,8 @@ async def monitor_channels(context, session):
                             
                             suffix = 'st' if idx == 1 else 'nd' if idx == 2 else 'rd' if idx == 3 else 'th'
                             trader_message = (
-                                f"This message was sent to the private channel 150 seconds ago contact @orehub_zenith to join the private channel "
-                                f""
+                                f"{idx}{suffix} trader {trader} bought {sol_amount_str} "
+                                f"on {pump_type}"
                             ).strip()
                             
                             message_parts.append(trader_message)
