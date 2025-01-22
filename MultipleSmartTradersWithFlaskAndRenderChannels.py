@@ -346,9 +346,9 @@ async def monitor_channels(context, session):
                                 f"on {pump_type}"
                             ).strip()
                             
-                            message_parts.append(trader_message)
-                            message_parts.append("\nThis message was sent to the private group 150 seconds ago")
-                            message_parts.append("DM @thegroovymate for access to the privates")
+                            #message_parts.append(trader_message)
+                        message_parts.append("\nThis message was sent to the private group 150 seconds ago")
+                        message_parts.append("DM @thegroovymate for access to the privates")
 
                         current_messages.append("\n".join(message_parts))
 
