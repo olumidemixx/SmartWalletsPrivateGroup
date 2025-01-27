@@ -345,8 +345,12 @@ async def monitor_channels(context, session):
                                 f"{idx}{suffix} trader {trader} bought {sol_amount_str} "
                                 f"on {pump_type}"
                             ).strip()
+                            trader_real = (
+                                f"{idx}{suffix} trader  "
+                                f"{trader}"
+                            ).strip()
                             
-                            #message_parts.append(trader_message)
+                            message_parts.append(trader_real)
                         #message_parts.append("\nThis message was sent to the private group 150 seconds ago")
                         #message_parts.append("DM @thegroovymate for access to the privates")
 
