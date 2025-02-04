@@ -312,7 +312,7 @@ async def monitor_channels(context, session):
             # Scrape messages from all channels
             for chat_link, limit in chat_limits.items():
                 await scrap_message(chat_link, session, limit)
-                await asyncio.sleep(1)
+                await asyncio.sleep(3)
             
             current_messages = []
             current_tokens = {}  # Track current round's tokens and trader counts
@@ -393,7 +393,7 @@ async def monitor_channels(context, session):
             previous_tokens = current_tokens.copy()
             
             # Sleep before next round
-            #await asyncio.sleep()
+            await asyncio.sleep(1)
             logging.info("Another round Commences")
         
 
