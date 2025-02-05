@@ -28,7 +28,7 @@ BOT_TOKEN = "7931001355:AAFtun7fy35zwg5z_1T_ugoln1f5zdM5Sa0"#"7327291802:AAFPM91
 API_ID = 21202746#int(os.getenv("API_ID"))
 API_HASH = "e700432294937e6925a83149ee7165a0"#os.getenv("API_HASH")
 # Create Telethon client
-telethon_client = TelegramClient('goldfish', API_ID, API_HASH)
+telethon_client = TelegramClient('xxxxxxxxxyyyyyyyyyyyy', API_ID, API_HASH)
 
 # Excluded token address
 EXCLUDED_TOKEN = 'So11111111111111111111111111111112'
@@ -192,6 +192,9 @@ def get_token_address(text, chat_link):
         if 'GMGN_alert_bot' in chat_link:
             return solana_addresses[3] if len(solana_addresses) > 3 else solana_addresses[-1]
         
+        if 'FireSorcerer_bot' in chat_link:
+            return solana_addresses[3] if len(solana_addresses) > 3 else solana_addresses[-1]
+        
         if 'Solbix_bot' in chat_link:
             return solana_addresses[4] if len(solana_addresses) > 4 else solana_addresses[-1]
         
@@ -286,8 +289,9 @@ async def monitor_channels(context, session):
         'https://t.me/ray_green_bot': 40,
         #'https://t.me/handi_cat_bot': 40,
         'https://t.me/Wallet_tracker_solana_spybot': 23,
-        'https://t.me/Godeye_wallet_trackerBot': 40,
-        'https://t.me/GMGN_alert_bot': 40,
+        'https://t.me/Godeye_wallet_trackerBot': 23,
+        'https://t.me/GMGN_alert_bot': 23,
+        'https://t.me/FireSorcerer_bot': 23,
         #'https://t.me/Solbix_bot': 8,
         #'https://t.me/Cielo_finance_free_bot': 40,
         #'https://t.me/SOLWalletTrackerBot': 23,
