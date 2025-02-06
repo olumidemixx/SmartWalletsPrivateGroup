@@ -289,15 +289,15 @@ async def monitor_channels(context, session):
         'https://t.me/ray_green_bot': 40,
         #'https://t.me/handi_cat_bot': 40,
         'https://t.me/Wallet_tracker_solana_spybot': 23,
-        'https://t.me/Godeye_wallet_trackerBot': 23,
-        'https://t.me/GMGN_alert_bot': 23,
+        #'https://t.me/Godeye_wallet_trackerBot': 23,
+        'https://t.me/GMGN_alert_bot': 40,
         'https://t.me/FireSorcerer_bot': 23,
         #'https://t.me/Solbix_bot': 8,
         #'https://t.me/Cielo_finance_free_bot': 40,
         #'https://t.me/SOLWalletTrackerBot': 23,
         #'https://t.me/CashCash_alert_bot': 23,
         'https://t.me/spark_green_bot': 40,
-        'https://t.me/defined_bot': 75,
+        'https://t.me/defined_bot': 40,
         #'https://t.me/EtherDROPS7_bot': 40
     }
 
@@ -316,7 +316,7 @@ async def monitor_channels(context, session):
             # Scrape messages from all channels
             for chat_link, limit in chat_limits.items():
                 await scrap_message(chat_link, session, limit)
-                await asyncio.sleep(3)
+                await asyncio.sleep(1.5)
             
             current_messages = []
             current_tokens = {}  # Track current round's tokens and trader counts
@@ -385,7 +385,7 @@ async def monitor_channels(context, session):
                         text=message,
                         parse_mode='Markdown'
                     )
-                    await asyncio.sleep(1)
+                    await asyncio.sleep(3)
             
             #else:
              #   await context.bot.send_message(
