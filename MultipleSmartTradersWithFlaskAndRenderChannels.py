@@ -288,7 +288,7 @@ async def monitor_channels(context, session):
     chat_limits = {
         'https://t.me/ray_green_bot': 40,
         #'https://t.me/handi_cat_bot': 40,
-        'https://t.me/Wallet_tracker_solana_spybot': 23,
+       #'https://t.me/Wallet_tracker_solana_spybot': 23,
         #'https://t.me/Godeye_wallet_trackerBot': 23,
         'https://t.me/GMGN_alert_bot': 40,
         'https://t.me/FireSorcerer_bot': 23,
