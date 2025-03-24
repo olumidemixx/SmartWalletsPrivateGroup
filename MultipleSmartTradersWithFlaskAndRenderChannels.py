@@ -28,7 +28,7 @@ BOT_TOKEN = "7931001355:AAFtun7fy35zwg5z_1T_ugoln1f5zdM5Sa0"#"7327291802:AAFPM91
 API_ID = 21202746#int(os.getenv("API_ID"))
 API_HASH = "e700432294937e6925a83149ee7165a0"#os.getenv("API_HASH")
 # Create Telethon client
-telethon_client = TelegramClient('fnf', API_ID, API_HASH)
+telethon_client = TelegramClient('llb', API_ID, API_HASH)
 
 # Excluded token address
 EXCLUDED_TOKEN = 'So11111111111111111111111111111112'
@@ -385,7 +385,7 @@ async def monitor_channels(context, session):
                         text=message,
                         parse_mode='Markdown'
                     )
-                    await asyncio.sleep(2)
+                    await asyncio.sleep(1)
             
             #else:
              #   await context.bot.send_message(
@@ -397,14 +397,14 @@ async def monitor_channels(context, session):
             previous_tokens = current_tokens.copy()
             
             # Sleep before next round
-            await asyncio.sleep(3.5)
+            await asyncio.sleep(1.5)
             logging.info("Another round Commences")
         
 
         except Exception as e:
             logging.error(f"Error in monitor_channels: {e}")
             logging.error(f"Current state - traders: {len(session.multi_trader_tokens)}")
-            await asyncio.sleep(5)
+            await asyncio.sleep(3)
 
         if not session.is_monitoring:
             final_duration = time.time() - session.start_time
