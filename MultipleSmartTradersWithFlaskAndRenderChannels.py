@@ -24,9 +24,14 @@ nest_asyncio.apply()
 dotenv_path = find_dotenv()
 load_dotenv(dotenv_path)
 # Telethon client configuration
-BOT_TOKEN = "7931001355:AAFtun7fy35zwg5z_1T_ugoln1f5zdM5Sa0"#"7327291802:AAFPM911VQH5uyTX2uPG8j503NCt3r62yMs"#3os.getenv("BOT_TOKEN")
-API_ID = 21202746#int(os.getenv("API_ID"))
-API_HASH = "e700432294937e6925a83149ee7165a0"#os.getenv("API_HASH")
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # load variables from .env file
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+
+API_ID = int(os.getenv("API_ID"))
+API_HASH = os.getenv("API_HASH")
 # Create Telethon client
 telethon_client = TelegramClient('llb', API_ID, API_HASH)
 
